@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+    int Size,x,y,a=0,z=5;
+    printf("Enter Size Of Array : ");
+    scanf("%d",&Size);
+    int Array[Size];
+    for(x=0;x<Size;x++)
+    {
+        printf("\nEnter A Number A[%d] : ",x);
+        scanf("%d",&Array[x]);
+    }
+    for(x=0;x<Size;x++)
+    {
+        for(y=0;y<Size;y++)
+        {
+            if(Array[x] == Array[y] && y != x)
+            {
+                z = 10;
+                break;
+            }
+        }
+    }
+    if(z==10)
+    {
+        printf("DUPLICATE");
+    }
+    else if(z == 5)
+    {
+        printf("UNIQUE");
+    }
+}
